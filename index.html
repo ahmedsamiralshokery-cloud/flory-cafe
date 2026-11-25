@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>فلوري كافيه | Flori Cafe — قهوة ومشروبات وحلويات</title>
+<meta name="description" content="منيو فلوري كافيه (Flori Cafe) — قهوة، مشروبات ساخنة وباردة، ميلك شيك، كوكتيل، وافل وحلويات. اطلب أونلاين أو من الترابيزة على واتساب.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Lalezar&display=swap">
+<meta name="theme-color" content="#2d6e78">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Flori Cafe">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Flori Cafe">
+<meta property="og:locale" content="ar_EG">
+<meta property="og:title" content="فلوري كافيه — Flori Cafe">
+<meta property="og:description" content="السعادة تبدأ هنا — تصفح منيو فلوري كافيه واطلب أونلاين على واتساب.">
+<meta property="og:url" content="__SITE_URL__">
+<meta property="og:image" content="__SITE_URL__icons/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="شعار فلوري كافيه">
+<link rel="canonical" href="__SITE_URL__">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="__SITE_URL__icons/og-image.jpg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="w">
+    <img src="img/logo.jpg" data-b="logo" alt="شعار فلوري كافيه">
+    <b>فلوري كافيه</b>
+    <a class="btn y" href="#menu" style="padding:.45rem 1rem;font-size:.92rem">المنيو</a>
+    <button class="btn ghost icon" id="thm" type="button" aria-label="تغيير المظهر">🌙</button>
+    <button class="btn ghost" id="inst" hidden style="font-size:.86rem">📲 التطبيق</button>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="w">
+      <div>
+        <span class="badge" dir="ltr">HAPPINESS IS HERE</span>
+        <h1>قهوتك وحلوياتك<br>في <span>فلوري كافيه</span></h1>
+        <p>قهوة مختصة، مشروبات ساخنة وباردة، ميلك شيك، كوكتيلات، وافل وبان كيك وحلويات فريش كل يوم.</p>
+        <div class="acts">
+          <a class="btn y" href="#menu">تصفح المنيو</a>
+          <a class="btn ghost" href="#paper">المنيو بالصور</a>
+          <a class="btn" data-wa="1" href="https://wa.me/201557543742" target="_blank" rel="noopener" style="background:#fff;color:#122d33">واتساب</a>
+        </div>
+      </div>
+      <img class="wm" src="img/logo.jpg" data-b="logo" alt="Flori Cafe — Happiness is here" width="500" height="500">
+    </div>
+  </div>
+
+  <section id="offers" hidden>
+    <div class="w">
+      <h2>عروض فلوري</h2>
+      <div class="offers" id="offerList"></div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="w">
+      <h2>المنيو</h2>
+      <div class="search-wrap">
+        <span class="si" aria-hidden="true">🔍</span>
+        <input id="q" type="search" placeholder="ابحث في المنيو (مثلًا: لاتيه، وافل، موهيتو، Oreo)..." autocomplete="off">
+        <button id="qClr" type="button" aria-label="مسح البحث" hidden>×</button>
+      </div>
+      <div class="tabs" id="tabs" role="tablist"></div>
+      <div id="catHead"></div>
+      <ul id="list"></ul>
+    </div>
+  </section>
+
+  <section id="paper" style="padding-top:0">
+    <div class="w">
+      <h2>المنيو بالصور</h2>
+      <div class="menus">
+        <button data-zoom="m1" aria-label="منيو القهوة والمشروبات الساخنة"><img src="img/menu-1.jpg" data-b="m1" alt="منيو القهوة والمشروبات الساخنة" loading="lazy"></button>
+        <button data-zoom="m2" aria-label="منيو الميلك شيك والفرابيه والآيس كوفي"><img src="img/menu-2.jpg" data-b="m2" alt="منيو الميلك شيك والفرابيه والآيس كوفي" loading="lazy"></button>
+        <button data-zoom="m3" aria-label="منيو السوفت كوكتيل والكوكتيل"><img src="img/menu-3.jpg" data-b="m3" alt="منيو السوفت كوكتيل والكوكتيل" loading="lazy"></button>
+        <button data-zoom="m4" aria-label="منيو السموزي والريد بول والمياه الغازية والإضافات"><img src="img/menu-4.jpg" data-b="m4" alt="منيو السموزي والريد بول والمياه الغازية والإضافات" loading="lazy"></button>
+        <button data-zoom="m5" aria-label="منيو العصائر الفريش والآيس كريم"><img src="img/menu-5.jpg" data-b="m5" alt="منيو العصائر الفريش والآيس كريم" loading="lazy"></button>
+        <button data-zoom="m6" aria-label="منيو الفطار والوافل وأم علي والحلويات والبان كيك"><img src="img/menu-6.jpg" data-b="m6" alt="منيو الفطار والوافل وأم علي والحلويات والبان كيك" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="w">
+    <img src="img/logo.jpg" data-b="logo" alt="فلوري كافيه">
+    <div>
+      <p class="d" style="font-size:1.7rem">Flori Cafe — فلوري كافيه</p>
+      <p style="color:var(--mint);font-weight:700;letter-spacing:.8px" dir="ltr">COFFEE • CAFE &amp; SWEET • COLD DRINKS</p>
+      <p>الطلبات والتواصل: <a data-tel="1" href="tel:01557543742">01557543742</a><span id="ph2Wrap" hidden> — <a data-tel2="1" href=""></a></span> — <a data-wa="1" href="https://wa.me/201557543742" target="_blank" rel="noopener">واتساب مباشر</a></p>
+      <p>HAPPINESS IS HERE</p>
+    </div>
+  </div>
+  <p class="cp"><button id="admBtn" aria-label="دخول الإدارة">©</button> Flori Cafe — فلوري كافيه</p>
+  <p class="cp" dir="ltr" style="text-align:center;margin-top:.35rem">created by AS</p>
+</footer>
+
+<button id="fab" class="btn" hidden>
+  <span>🛒 السلة (<span id="cnt"></span>)</span>
+  <span><span id="tot"></span> جنيه</span>
+</button>
+
+<dialog id="cartD">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem">
+    <h2>طلبك</h2>
+    <button class="btn" id="clrCart" type="button" style="padding:.3rem .75rem;font-size:.82rem;background:transparent;color:var(--mut);border:1.5px solid var(--line)">إفراغ السلة</button>
+  </div>
+  <ul id="lines"></ul>
+
+  <div class="omode" role="group" aria-label="طريقة الطلب">
+    <button type="button" data-om="delivery" aria-pressed="true">🛵 توصيل</button>
+    <button type="button" data-om="table" aria-pressed="false">☕ داخل الكافيه</button>
+    <button type="button" data-om="pickup" aria-pressed="false">🛍️ تيك أواي</button>
+  </div>
+
+  <div id="delWrap">
+    <label for="area"><b>منطقة التوصيل</b></label>
+    <select id="area"></select>
+  </div>
+
+  <div id="tblWrap" hidden>
+    <label for="tbl"><b>رقم الترابيزة</b></label>
+    <input id="tbl" placeholder="مثلًا: ترابيزة 5" autocomplete="off">
+  </div>
+
+  <p style="background:var(--mint-soft);padding:.65rem .9rem;border-radius:14px;margin:.6rem 0">
+    المنتجات: <span id="sub"></span> جنيه<br>
+    <span id="feeRow">التوصيل: <span id="fee"></span><br></span>
+    <b>الإجمالي: <span id="sum"></span> جنيه</b>
+  </p>
+
+  <button class="btn" id="noteBtn" type="button" style="margin-bottom:.5rem;padding:.4rem .9rem;font-size:.88rem">📝 ملاحظات على الطلب</button>
+  <textarea id="note" rows="2" placeholder="مثلًا: سكر خفيف، تلج أقل، صوص زيادة..." hidden></textarea>
+
+  <input id="nm" placeholder="الاسم" autocomplete="name" required>
+  <input id="ph" type="tel" placeholder="رقم التليفون" autocomplete="tel">
+  <div id="adWrap">
+    <p id="adH" hidden style="margin:0 0 .3rem;color:#c62828;font-weight:600">منطقتك مش في القايمة؟ اكتبها هنا مع عنوانك، والتوصيل هنتفق عليه.</p>
+    <textarea id="ad" rows="2" placeholder="العنوان بالتفصيل (الشارع، رقم العمارة...)" autocomplete="street-address"></textarea>
+  </div>
+  <p id="err" role="alert"></p>
+  <div style="display:flex;gap:.5rem">
+    <button class="btn y" id="send" style="flex:1;justify-content:center">ابعت الطلب على واتساب</button>
+    <button class="btn" id="close" type="button">إغلاق</button>
+  </div>
+</dialog>
+
+<dialog id="saD">
+  <h2>اختياراتك</h2>
+  <p id="saT"></p>
+  <div id="saL" class="sa"></div>
+  <div style="display:flex;gap:.5rem">
+    <button class="btn y" id="saOk" style="flex:1;justify-content:center">تمام</button>
+    <button class="btn" id="saX" type="button">إلغاء</button>
+  </div>
+</dialog>
+
+<dialog id="pwD">
+  <h2>الإدارة</h2>
+  <input id="pw" type="password" placeholder="الباسورد" autocomplete="current-password">
+  <p id="pwE" role="alert" style="color:#c62828;min-height:1.5em;margin:0 0 .5rem"></p>
+  <div style="display:flex;gap:.5rem">
+    <button class="btn y" id="pwOk" style="flex:1;justify-content:center">دخول</button>
+    <button class="btn" id="pwX" type="button">إلغاء</button>
+  </div>
+</dialog>
+
+<dialog id="admD">
+  <h2>لوحة إدارة فلوري كافيه</h2>
+  <div class="tabs" id="admTabs" style="position:static"></div>
+  <div id="admBody" style="margin-top:.75rem"></div>
+  <p id="admMsg" role="status" style="font-weight:600"></p>
+  <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+    <button class="btn y" id="admSave">✏️ تحديث الموقع الآن</button>
+    <button class="btn" id="admX" type="button">إغلاق</button>
+  </div>
+</dialog>
+
+<dialog id="zoomD" class="big"><img alt="صورة المنيو" id="zimg"></dialog>
+
+<script>document.write('<script src="js/menu-data.js?v='+Math.floor(Date.now()/60000)+'"><\/script><script src="js/app.js"><\/script>')</script>
+<script src="js/pwa.js" defer></script>
+<noscript>الموقع محتاج JavaScript.</noscript>
+</body>
+</html>
