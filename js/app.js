@@ -76,7 +76,17 @@ const pic=(im)=>{const u=im?(BLOBS[im]||BLOBS.IMG[im]||im):"";return u?`<img cla
 const src=o=>BLOBS.IMG[o.img]||o.img;
 const feeOf=()=>{if(orderMode!=="delivery")return 0;const o=$("#area").selectedOptions[0];return o&&o.dataset.f!==undefined?+o.dataset.f:null};
 
-const addCart=(k,p)=>{const i=cart.get(k)||{n:k,p,q:0};i.q++;cart.set(k,i);saveCart();draw()};
+let toastT;
+const showToast=msg=>{
+  const el=$("#toast");if(!el)return;
+  el.textContent=msg;el.classList.add("show");
+  clearTimeout(toastT);toastT=setTimeout(()=>el.classList.remove("show"),1600);
+};
+const addCart=(k,p)=>{
+  const i=cart.get(k)||{n:k,p,q:0};i.q++;cart.set(k,i);saveCart();draw();
+  showToast("تمت الإضافة للسلة ✓");
+  const fb=$("#fab");if(fb){fb.classList.remove("bump");void fb.offsetWidth;fb.classList.add("bump");}
+};
 
 /* ---- Item Customization Modal (#saD) ---- */
 const SUGAR_OPTS=["سادة","على الريحة","مظبوط","مانو","زيادة"];
@@ -156,8 +166,13 @@ function init(){
   $("#tabs").innerHTML="";
   Object.keys(S.menu).forEach(c=>{
     const b=document.createElement("button");
-    b.textContent=c;b.role="tab";
-    b.onclick=()=>{$("#q").value="";$("#qClr").hidden=true;show(c)};
+    b.type="button";b.textContent=c;b.role="tab";
+    b.onclick=()=>{
+      $("#q").value="";$("#qClr").hidden=true;show(c);
+      b.scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
+      const m=$("#menu");
+      if(m&&m.getBoundingClientRect().top<-20)m.scrollIntoView({behavior:"smooth",block:"start"});
+    };
     $("#tabs").append(b);
   });
   const k=$("#area").value||"x";
@@ -410,6 +425,10 @@ document.addEventListener("click",e=>{
   else if(b.dataset.zoom){$("#zimg").src=BLOBS[b.dataset.zoom];$("#zoomD").showModal()}
 });
 $("#zoomD").onclick=()=>$("#zoomD").close();
+if($("#zoomX"))$("#zoomX").onclick=e=>{e.stopPropagation();$("#zoomD").close()};
+document.querySelectorAll("dialog:not(.big)").forEach(d=>{
+  d.addEventListener("click",e=>{if(e.target===d)d.close()});
+});
 $("#fab").onclick=()=>$("#cartD").showModal();
 $("#close").onclick=()=>$("#cartD").close();
 
