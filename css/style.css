@@ -244,20 +244,13 @@ h2{font-size:clamp(1.75rem,5vw,2.65rem);margin-bottom:.95rem;color:var(--ink)}
 /* ---- Category Tabs (Sticky Horizontal Strip on Mobile, Wrapped on Desktop) ---- */
 .tabs{
   display:flex;
-  flex-wrap:nowrap;
+  flex-wrap:wrap;
   gap:.45rem;
-  overflow-x:auto;
-  -webkit-overflow-scrolling:touch;
-  scrollbar-width:none;
-  scroll-snap-type:x proximity;
-  position:sticky;
-  top:calc(env(safe-area-inset-top,0px) + var(--hdr-h));
-  z-index:18;
-  background:color-mix(in srgb,var(--bg) 93%,transparent);
-  -webkit-backdrop-filter:blur(10px);
-  backdrop-filter:blur(10px);
-  margin-inline:-1rem;
-  padding:.6rem 1rem;
+  overflow-x:visible;
+  position:static;
+  background:transparent;
+  margin-inline:0;
+  padding:.5rem 0;
   border-bottom:1px solid var(--line)
 }
 .tabs::-webkit-scrollbar{display:none}
