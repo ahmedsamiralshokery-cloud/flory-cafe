@@ -56,7 +56,7 @@ function syncPhone(){
   const p1=dispNumber(S.phone||DEFAULT_PHONE);
   const wa=waNumber(S.phone||DEFAULT_PHONE);
   document.querySelectorAll("[data-wa]").forEach(a=>{a.href="https://wa.me/"+wa});
-  document.querySelectorAll("[data-tel]").forEach(a=>{a.href="tel:"+p1;a.textContent=p1});
+  document.querySelectorAll("[data-tel]").forEach(a=>{a.href="tel:"+p1;a.textContent=(a.dataset.icon||"")+p1});
   const p2=toEnDigits(S.phone2||"").replace(/^\+/,"");
   const w2=$("#ph2Wrap"),a2=$("[data-tel2]");
   if(w2&&a2){
