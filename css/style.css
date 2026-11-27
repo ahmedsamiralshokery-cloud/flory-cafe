@@ -508,7 +508,7 @@ dialog input:focus,dialog textarea:focus,dialog select:focus{outline:none;border
 #admTabs{
   position:static;margin-inline:0;padding:.35rem 0;border-bottom:1px solid var(--line);
   background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;
-  flex-wrap:nowrap;overflow-x:auto
+  flex-wrap:wrap;overflow-x:visible
 }
 .ar{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.45rem;align-items:center}
 .ar input{margin:0;min-width:90px;flex:1 1 95px;width:auto}
